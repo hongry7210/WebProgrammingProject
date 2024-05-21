@@ -8,12 +8,14 @@ $query = 'CREATE DATABASE IF NOT EXISTS gamekind';
 mysqli_query($db, $query) or die(mysqli_error($db));
 mysqli_select_db($db, 'gamekind') or die(mysqli_error($db));
 
-$query1 = CREATE TABLE game(
+$query1 = 'CREATE TABLE game(
     gameid INTEGER NOT NULL AUTO_INCREMENT,
     gamename VARCHAR(255) NOT NULL,
     PRIMARY KEY (gameid)
 )
-ENGINE=MyISAM;
+ENGINE=MyISAM';
+
+mysqli_query($db, $query1) or die(mysqli_error($db));
 
 //connect to MySQL 
 /*$db1 = mysqli_connect('localhost', 'root', '') or die ('Unable to connect. Check your connection parameters.');
