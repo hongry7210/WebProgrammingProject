@@ -8,7 +8,7 @@
     </head>
     <body>
         <div style="justify-content: center;">
-            <form method="post" action="./movie1.php"
+            <form method="post" action="./community.php"
             style=
             "text-align : center;
             border:1px solid gray;

@@ -1,4 +1,5 @@
 <?php
+session_start();
 ?>
 <html>
     <head>
@@ -20,7 +21,6 @@
         <p>Re-password
             <input type="password" name="repass" />           
         </p>
-        
         <input type="submit" value="submit"/>
         </form>
         </div>
