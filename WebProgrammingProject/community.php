@@ -21,6 +21,8 @@
     $result = mysqli_query($db, $query) or die(mysqli_error($db));
     $ids = urlencode($id);
     if ($row = mysqli_fetch_assoc($result)) {
+        echo 'welcome!';
+        echo $id;
         echo '<a href="./communitysite.php?id=' . $ids . '">Go to Community site!</a>';
     } else {
         echo 'Invalid credentials.';

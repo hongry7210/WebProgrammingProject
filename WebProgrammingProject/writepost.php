@@ -1,5 +1,7 @@
 <?php
 $id = isset($_GET['id']) ? $_GET['id'] : '';
+echo $id;
+echo 'asdf';
 ?>
 
 <html>
@@ -7,8 +9,11 @@ $id = isset($_GET['id']) ? $_GET['id'] : '';
         
     </head>
     <body>
+        <?php
+        echo $id; 
+        ?>
         <div style="justify-content: center;">
-            <form method="post" action="communitypostadd.php"
+            <form method="post" action="./database/communitypostadd.php"
             style=
             "text-align : center;
             border:1px solid gray;
@@ -27,7 +32,8 @@ $id = isset($_GET['id']) ? $_GET['id'] : '';
                     <option value="Maplestory">Maplestory</option>
                 </select>
                 </p>
-                
+                <input type="hidden" name="postmemberid" value="<?php echo $id; ?>" />
+                <button type="submit">submit</button>
             </form>
         </div>
     </body>

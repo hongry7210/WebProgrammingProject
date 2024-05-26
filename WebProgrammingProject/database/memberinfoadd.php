@@ -18,7 +18,7 @@ $query = 'INSERT INTO memberinfo
 mysqli_query($db, $query) or die(mysqli_error($db));
 
 echo 'Sign up successfully!';
-echo '<a href="../mainpage.php">';
+echo '<a href="./mainpage.php">';
 echo 'Back to Login Page';
 echo '</a>';
 ?>

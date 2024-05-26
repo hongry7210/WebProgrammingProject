@@ -1,4 +1,5 @@
 <?php
+session_start();
 $db = mysqli_connect('localhost', 'root', '') or die ('Unable to connect. Check your connection parameters.');
 $query = 'CREATE DATABASE IF NOT EXISTS communitypost';
 
