@@ -1,7 +1,6 @@
 <?php
 $id = isset($_GET['id']) ? $_GET['id'] : '';
 echo $id;
-echo 'asdf';
 ?>
 
 <html>
@@ -32,7 +31,7 @@ echo 'asdf';
                     <option value="Maplestory">Maplestory</option>
                 </select>
                 </p>
-                <input type="hidden" name="postmemberid" value="<?php echo $id; ?>" />
+                <input type="hidden" name="postmembername" value="<?php echo $id; ?>" />
                 <button type="submit">submit</button>
             </form>
         </div>
