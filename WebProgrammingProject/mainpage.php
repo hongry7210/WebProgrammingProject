@@ -7,7 +7,7 @@
         
     </head>
     <body>
-        <div style="justify-content: center;">
+        <div style="justify-content: center;align-items:center;">
             <form method="post" action="./community.php"
             style=
             "text-align : center;
