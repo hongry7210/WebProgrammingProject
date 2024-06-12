@@ -4,7 +4,30 @@
 
 <html>
     <head>
-        
+        <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        input[type="text"], input[type="password"] {
+            padding: 8px;
+            margin-top: 10px;
+            border: 1px solid gray;
+        }
+
+        input[type="submit"] {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        </style>
     </head>
     <body>
         <div style="justify-content: center;align-items:center;">
@@ -13,11 +36,13 @@
             "text-align : center;
             border:1px solid gray;
             width: 400px;
-            height: 200px">
-                <p>Enter your username:
+            height: 300px">
+                <p>Username
+                    <br/>
                 <input type="text" name="user" />
                 </p>
-                <p>Enter your password:
+                <p>password
+                    <br/>
                 <input type="password" name="pass" />
                 </p>
                 <p>

@@ -19,9 +19,7 @@ $query = 'INSERT INTO post
     ("'.$posttitle.'","'.$postcontent.'","'.$gamename.'","'.$id.'")';
 
 mysqli_query($db, $query) or die(mysqli_error($db));
-echo $id;
-echo 'upload successfully!';
-echo '<a href="../communitysite.php?id=' . $id . '">';
-echo 'Back to Community Page';
-echo '</a>';
+echo '<script type="text/javascript">';
+echo 'window.location = "../communitysite.php?id=' . $id . '";';
+echo '</script>';
 ?>

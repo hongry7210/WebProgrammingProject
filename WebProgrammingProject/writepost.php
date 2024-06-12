@@ -1,39 +1,91 @@
 <?php
 $id = isset($_GET['id']) ? $_GET['id'] : '';
-echo $id;
 ?>
 
 <html>
-    <head>
-        
-    </head>
-    <body>
-        <?php
-        echo $id; 
-        ?>
-        <div style="justify-content: center;">
-            <form method="post" action="./database/communitypostadd.php"
-            style=
-            "text-align : center;
-            border:1px solid gray;
+<head>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+            margin: 0;
+        }
+
+        .form-container {
+            text-align: center;
+            border: 1px solid gray;
+            border-radius: 8px;
             width: 400px;
-            height: 200px">
-                <p>Enter Title
-                <input type="text" name="posttitle" />
-                </p>
-                <p>Enter contents
-                <input type="textarea" name="postcontent" />
-                </p>
-                <p>Select game:
-                <select name="gamename">
-                    <option value="League Of Legend">League Of Legend</option>
-                    <option value="FC Online">FC Online</option>
-                    <option value="Maplestory">Maplestory</option>
-                </select>
-                </p>
-                <input type="hidden" name="postmembername" value="<?php echo $id; ?>" />
-                <button type="submit">submit</button>
-            </form>
-        </div>
-    </body>
-</html> 
+            padding: 20px;
+            background-color: white;
+        }
+
+        .form-container p {
+            margin: 10px 0;
+        }
+
+        .form-container input[type="text"],
+        .form-container textarea,
+        .form-container select {
+            width: 400px;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid gray;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-container textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        .form-container button {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: lightblue;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+    </style>
+    <script type="text/javascript">
+        function nav(id){
+            window.location = 'http://localhost:1111/PHP/WebProgrammingProject/communitysite.php?id='+id;
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <h1>Write post</h1>
+    <div class="form-container">
+        <form method="post" action="./database/communitypostadd.php" onsubmit="return nav(<?php echo $id; ?>);">
+            <p>Enter Title</p>
+            <input type="text" name="posttitle" />
+            <p>Enter contents</p>
+            <textarea name="postcontent"></textarea>
+            <p>Select game:</p>
+            <select name="gamename">
+                <option value="League Of Legend">League Of Legend</option>
+                <option value="FC Online">FC Online</option>
+                <option value="Maplestory">Maplestory</option>
+            </select>
+            <input type="hidden" name="postmembername" value="<?php echo $id; ?>" />
+            <p><button type="submit">Submit</button></p>
+        </form>
+    </div>
+</body>
+</html>

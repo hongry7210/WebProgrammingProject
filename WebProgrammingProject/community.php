@@ -2,10 +2,7 @@
     session_start();
     $id = isset($_POST['user']) ? $_POST['user'] : '';
     $pass = isset($_POST['pass']) ? $_POST['pass'] : '';
-    if(empty($id)||empty($pass)) {
-        echo 'please enter id and password to access this page';
-    }
-    else {
+
     $db = mysqli_connect('localhost', 'root', '') or
     die ('Unable to connect. Check your connection parameters.');
     
@@ -21,12 +18,12 @@
     $result = mysqli_query($db, $query) or die(mysqli_error($db));
     $ids = urlencode($id);
     if ($row = mysqli_fetch_assoc($result)) {
-        echo 'welcome!';
-        echo $id;
-        echo '<a href="./communitysite.php?id=' . $ids . '">Go to Community site!</a>';
+        echo '<script type="text/javascript">window.location = "./communitysite.php?id=' . $ids . '"</script>';
     } else {
-        echo 'Invalid credentials.';
+        echo '<h1 style="margin-left:600px;">Invalid credentials.</h1>';
     }
-}
+
     ?>
+
+
     <!--code for afterloginpage-->

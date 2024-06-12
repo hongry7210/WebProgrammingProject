@@ -22,6 +22,8 @@ $query = 'INSERT INTO comment
 
 mysqli_query($db, $query) or die(mysqli_error($db));
 
-echo '<a href="../post.php?postnum=' . $postid . '&posttitle=' . $posttitle . '&postcontent=' . $postcontent . '&memberid=' . $memberid . '">go to page</a>';
+echo '<script type="text/javascript">';
+echo 'window.location = "../post.php?postnum=' . $postid . '&posttitle=' . $posttitle . '&postcontent=' . $postcontent . '&memberid=' . $memberid . '";';
+echo '</script>';
 
 ?>
