@@ -71,12 +71,6 @@ $id = isset($_GET['id']) ? $_GET['id'] : '';
             <input type="text" name="posttitle" />
             <p>Enter contents</p>
             <textarea name="postcontent"></textarea>
-            <p>Select game:</p>
-            <select name="gamename">
-                <option value="League Of Legend">League Of Legend</option>
-                <option value="FC Online">FC Online</option>
-                <option value="Maplestory">Maplestory</option>
-            </select>
             <input type="hidden" name="postmembername" value="<?php echo $id; ?>" />
             <p><button type="submit">Submit</button></p>
         </form>

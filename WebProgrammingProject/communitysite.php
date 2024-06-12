@@ -124,7 +124,6 @@ $query = 'CREATE TABLE IF NOT EXISTS post (
     postnum INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
     posttitle VARCHAR(255) NOT NULL,
     postcontent VARCHAR(255) NOT NULL,
-    gamename VARCHAR(255) NOT NULL,
     postmemberid INTEGER NULL,
     postmembername VARCHAR(255),
     comment INTEGER UNSIGNED NOT NULL,
