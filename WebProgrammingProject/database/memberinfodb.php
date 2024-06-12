@@ -16,5 +16,4 @@ ENGINE=MyISAM';
 
 mysqli_query($db, $query) or die(mysqli_error($db));
 
-$query = 'CREATE TABLE '
 ?>

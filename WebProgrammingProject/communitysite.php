@@ -114,6 +114,7 @@ mysqli_select_db($db, 'memberinfodb') or die(mysqli_error($db));
 <?php
 $query = 'SELECT posttitle, postmembername, postnum, postcontent
 FROM post
+ORDER BY postnum DESC
 ';
 
 $result = mysqli_query($db,$query) or die(mysqli_error($db));

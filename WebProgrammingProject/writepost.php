@@ -62,17 +62,11 @@ $id = isset($_GET['id']) ? $_GET['id'] : '';
         }
 
     </style>
-    <script type="text/javascript">
-        function nav(id){
-            window.location = 'http://localhost:1111/PHP/WebProgrammingProject/communitysite.php?id='+id;
-            return false;
-        }
-    </script>
 </head>
 <body>
     <h1>Write post</h1>
     <div class="form-container">
-        <form method="post" action="./database/communitypostadd.php" onsubmit="return nav(<?php echo $id; ?>);">
+        <form method="post" action="./database/communitypostadd.php">
             <p>Enter Title</p>
             <input type="text" name="posttitle" />
             <p>Enter contents</p>
