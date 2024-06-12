@@ -1,4 +1,4 @@
-    <?php
+<?php
     session_start();
     $id = isset($_POST['user']) ? $_POST['user'] : '';
     $pass = isset($_POST['pass']) ? $_POST['pass'] : '';
@@ -24,6 +24,3 @@
     }
 
     ?>
-
-
-    <!--code for afterloginpage-->
