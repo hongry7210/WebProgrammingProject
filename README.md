@@ -1,5 +1,3 @@
-# OpenSourceSWProject
-
 ## 프로젝트 설명
 
 - 로컬에서 사용할 수 있는 커뮤니티 사이트 제작
