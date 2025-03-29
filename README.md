@@ -29,10 +29,6 @@
 
 xampp 폴더에 들어간 다음, htdocs 폴더로 이동, htdocs 폴더 안에서 git clone
 
-ex) git clone https://github.com/Sumin0329/OpenSourceSWProject project 실행 시, project이름의 파일 생성
-
-
-
 브라우저 실행 후 localhost:(포트번호(대부분 80 사용))/(htdocs파일 안에서의 경로)/mainpage.php 로 접속
 
 ex) localhost:80/project/mainpage.php
